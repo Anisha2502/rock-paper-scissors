@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: cursive;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgb(70, 83, 116);
+    color: rgb(255, 255, 255);
+}
+h3{
+    font-size: 5vmin;
+}
+p{
+    font-size: 3vmin;
+}
+img, .active{
+    padding: 2vmin;
+    width: 8vmin;
+    height: 8vmin;
+}
+header, #result, .choice h3{
+    font-family: 'Kaushan Script', cursive;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(1, 4, 2);
+    font-size: 5vmin;
+    font-weight: 900;
+    padding: 1.5%;
+}
+#rcolor, #pcolor, #scolor{
+    position: relative;
+}
+#rcolor{
+    color: rgb(255, 0, 0);
+    animation: left-animation 2s ease;
+}
+#pcolor{
+    color: rgb(0, 0, 255);
+    animation: middle-animation 2s ease;
+}
+#scolor{
+    color: rgb(255, 255, 0);
+    animation: right-animation 2s ease;
+}
+.play{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.play p{
+    font-weight: 700;
+}
+.instructions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.selection{
+    display: flex;
+    justify-content: center;
+    gap: 10vmin;
+    margin-top: 5vmin;
+}
+.choice{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#playerScore, #computerScore{
+    color: rgb(173, 255, 47);
+}
+#playerSelection, #computerSelection{
+    display: hidden;
+}
+#result{
+    font-size: 6vmin;
+    font-weight: 700;
+    text-align: center;
+}
+.resultMsg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3vmin;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 5vmin;
+}
+.buttons button{
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+button:active{
+    transform: translateY(2px);
+}
+#rock{
+    border: 2vmin solid rgb(255, 0, 0);
+}
+#paper{
+    border: 2vmin solid rgb(0, 0, 255);
+}
+#scissors{
+    border: 2vmin solid rgb(247, 247, 31);
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+    background-color: rgb(1, 4, 2);
+}
+.overlay{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.activeRestart{
+    display: block;
+}
+#modal-content{
+    background-color:rgb(0, 0, 0);
+    width: 50vmin;
+    border-radius: 2vmin;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    padding: 5vmin;
+}
+#modal-content p{
+    font-size: 4vmin;
+}
+#restart{
+    font-family: cursive;
+    font-size: 4vmin;
+    background-color: rgb(70, 83, 116);
+    color: rgb(255, 255, 255);
+    border-radius: 2vmin;
+    border: 2vmin solid rgb(70, 83, 116);
+    margin-top: 3vmin;
+    padding: 0 2vmin ;
+}
+.fa-github{
+    color: rgb(255, 255, 255);
+    transition: transform 0.3s;
+}
+.fa-github:hover{
+    transform: rotate(360deg);
+}
+@keyframes left-animation{
+    from{
+        left: -500px;
+    }
+    to{
+        left: 0;
+    }
+}
+@keyframes middle-animation{
+    from{
+        top: -500px;
+    }
+    to{
+        top: 0;
+    }
+}
+@keyframes right-animation{
+    from{
+        right: -500px;
+    }
+    to{
+        right: 0;
+    }
+}
